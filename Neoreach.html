@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: proxima-nova, sans-serif;
+
+        }
+
+        .main1 {
+            width: 1005;
+            height: 100vh;
+
+        }
+
+        .navbar {
+            width: 95%;
+            margin: auto;
+            height: max-content;
+            /* border: 1px solid black; */
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+
+        .logo-img {
+            width: 170px;
+            height: 50px;
+        }
+
+        .nav {
+            width: 500px;
+            height: 50px;
+            /* border: 1px solid red; */
+
+
+
+        }
+
+        .ul1 {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            /* background-color: red; */
+            height: 100%;
+        }
+
+        li {
+            list-style: none;
+            font-size: 15px;
+            font-weight: 400;
+            cursor: pointer;
+        }
+
+        .login-div {
+            width: 220px;
+            height: 60px;
+            /* border: 1px solid blue; */
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+
+        }
+
+        .p-login {
+            font-size: 14px;
+
+        }
+
+        .p-login:hover {
+            color: rgb(0, 200, 175);
+            cursor: pointer;
+            transition: 0.5s;
+        }
+
+        .lineimg-div {
+            width: max-content;
+            /* border: 1px solid red; */
+            position: relative;
+        }
+
+        .undrline-img {
+            width: 130px;
+            height: 60px;
+            /* position: absolute; */
+
+        }
+
+        .btn1 {
+            width: 130px;
+            height: 40px;
+            border-radius: 10px;
+            border: none;
+            background-color: rgb(0, 200, 175);
+            position: absolute;
+            color: white;
+            font-size: 16px;
+            transition: 0.5s;
+            right: 0;
+            top: 7px;
+
+        }
+
+        .btn1:hover {
+            background-color: black;
+            color: rgb(0, 200, 175);
+            cursor: pointer;
+        }
+
+        .m-icondiv {
+            display: none;
+        }
+
+        .m-navbar {
+            display: none;
+        }
+
+        .text-anim-div {
+            width: 90%;
+            height: 75vh;
+            /* border: 1px solid black; */
+            margin-left: 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .run-text {
+            width: 380px;
+            height: 55vh;
+            /* border: 1px solid red; */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+
+        }
+
+        .h1-run-text {
+            width: 100%;
+            height: max-content;
+            /* border: 1px solid green; */
+
+        }
+
+        .h-run-text {
+            font-size: 37px;
+            line-height: 50px;
+        }
+
+        .p1-run-text {
+            width: 100%;
+            height: max-content;
+            /* border: 1px solid brown; */
+
+        }
+
+
+        .p-run-text {
+            color: rgb(45, 45, 45);
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 30px;
+
+        }
+
+        .img-btn {
+            width: 200px;
+            height: 60px;
+            /* border: 1px solid blue; */
+            position: relative;
+        }
+
+        .img-undrline {
+            width: 100%;
+            position: absolute;
+
+        }
+
+        .btn-underline {
+            width: 180px;
+            height: 50px;
+            background-color: rgb(0, 200, 175);
+            border-radius: 10px;
+            border: none;
+            position: absolute;
+            top: 0;
+            font-size: 15px;
+            font-weight: 600;
+            letter-spacing: 3px;
+            color: white;
+            transition: 0.5s;
+        }
+
+        .btn-underline:hover {
+            background-color: black;
+            cursor: pointer;
+            color: rgb(0, 200, 175);
+
+        }
+
+        .animation-div {
+            width: 68%;
+            height: 55vh;
+            /* border: 1px solid red; */
+            position: relative;
+            overflow: hidden;
+
+        }
+
+        .orng-circle {
+            width: 150px;
+
+        }
+
+
+        .card-slider {
+            width: 935px;
+            height: 200px;
+            margin-top: 40px;
+            /* border: 1px solid blue; */
+            position: relative;
+            overflow: hidden;
+
+
+
+        }
+
+        .card-img {
+            width: 110px;
+            position: absolute;
+            left: 12%;
+            animation: card 6s linear infinite;
+
+
+        }
+
+
+        @keyframes card {
+            0% {
+                margin-left: 0;
+            }
+
+            100% {
+                margin-left: 935px;
+
+            }
+        }
+
+        .two {
+            animation-delay: 1s;
+        }
+
+        .three {
+            animation-delay: 2s;
+        }
+
+        .four {
+            animation-delay: 3s;
+        }
+
+        .five {
+            animation-delay: 4s;
+        }
+
+        .six {
+            animation-delay: 5s;
+        }
+
+
+
+        .hero-img {
+            width: 400px;
+            position: absolute;
+            top: 0;
+            left: 5%;
+
+        }
+
+
+
+        .talkbubble-img1 {
+            position: absolute;
+            width: 180px;
+            top: 10%;
+            left: 30%;
+            animation: bubble1 1.5s linear infinite alternate;
+        }
+
+        @keyframes bubble1 {
+            0% {
+                margin-top: 0;
+            }
+
+            100% {
+                margin-top: 10px;
+
+            }
+        }
+
+        .talkbubble-img2 {
+            width: 180px;
+            position: relative;
+            bottom: 20%;
+            left: 10%;
+
+
+            animation: bubble2 1.5s linear infinite alternate;
+
+
+        }
+
+        @keyframes bubble2 {
+
+
+            0% {
+                margin-top: 0;
+            }
+
+            100% {
+                margin-top: -10px;
+            }
+        }
+
+        .horn-img {
+            width: 60px;
+            position: absolute;
+            left: 30%;
+            top: 70%;
+            z-index: 50;
+        }
+
+        .horn-lines {
+            width: 15px;
+            transform: rotate(330deg);
+            position: absolute;
+            left: 36%;
+            top: 70%;
+            z-index: 50;
+            opacity: 0;
+            transition: 0.1s;
+            animation: lines 1.5s linear infinite;
+
+        }
+
+        @keyframes lines {
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
+
+            60% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .hero-img2 {
+            width: 400px;
+            position: absolute;
+            top: 0;
+            left: 62%;
+        }
+
+        .graph-div {
+            width: 76px;
+            left: 69.5%;
+            top: 99px;
+            z-index: 50;
+            /* border: 1px solid red; */
+            /* opacity: 0; */
+            position: absolute;
+            overflow: hidden;
+            animation: graph 3s linear infinite;
+            /* animation-delay: 1s; */
+        }
+
+        .graph-img {
+
+            width: 70px;
+
+
+        }
+
+        @keyframes graph {
+            0% {
+                width: 1px;
+
+            }
+
+            79% {
+                width: 72px;
+            }
+
+            100% {
+                width: 72px;
+                z-index: 50;
+
+            }
+
+        }
+
+        .search-img {
+            width: 170px;
+            height: 40px;
+            position: absolute;
+            left: 625px;
+            top: 175px;
+            z-index: 50;
+        }
+
+        .white-dot {
+            width: 8px;
+            height: 8px;
+            background-color: white;
+            border-radius: 50%;
+            position: absolute;
+            right: 212px;
+            top: 95px;
+            z-index: 50;
+            visibility: hidden;
+            transition: 0.5s;
+            animation: dot 3s linear infinite;
+            
+        }
+
+        @keyframes dot {
+            0% {
+                visibility: hidden;
+
+            }
+
+            80% {
+                visibility: hidden;
+            }
+
+            100% {
+                visibility: visible;
+
+            }
+        }
+
+        .search-dot {
+            width: 280px;
+            height: 35px;
+            border-radius: 20px;
+            border: 1px solid black;
+            background-color: rgb(117, 223, 252);
+            position: absolute;
+            left: 625px;
+            top: 175px;
+            z-index: 50;
+            overflow: hidden;
+
+        }
+
+        .black-line {
+            border-bottom: 1px solid black;
+            margin-top: 15px;
+            /* position: absolute; */
+
+
+
+        }
+
+        .dotimg-div {
+            width: max-content;
+            /* border: 1px solid red; */
+            position: absolute;
+            top: 8px;
+
+            animation: search 2s linear infinite;
+
+
+        }
+
+        @keyframes search {
+            0% {
+                margin-left: 0;
+            }
+
+            100% {
+                margin-left: 53px;
+            }
+        }
+
+        .searchdot-img {
+            width: 279px;
+
+        }
+
+        .wave-div {
+            width: 252px;
+            /* border: 2px solid green; */
+            left: 69%;
+            top: 250px;
+            z-index: 100;
+            position: absolute;
+            overflow: hidden;
+
+
+        }
+
+        .wave-img {
+            width: 250px;
+            position: relative;
+            animation: wave 3s linear infinite;
+
+
+        }
+        .no2{
+             position: absolute;
+             left: 240px;
+            
+        }
+
+    
+        
+    
+        
+        
+
+        @keyframes wave {
+            0% {
+                margin-left: 0;
+           
+        }
+        100%{
+            margin-left: -160px;
+        }
+    }
+
+    .main2{
+        width: 100%;
+        height: 70vh;
+        border: 1px solid black;
+    }
+    .workillus{
+        width: 50%;
+        height: max-content;
+        border: 1px solid red;
+        position: relative;
+    }
+    .illus-img{
+        width: 100%;
+
+        
+    }
+    .pkg-photo1{
+        width: 200px;
+        position: absolute;
+        top: 150px;
+        left: 100px;
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /* *---------------Media Querry------------* */
+
+
+
+        @media screen and (max-width:1024px) {
+            .navbar {
+                display: none;
+
+            }
+
+            .m-navbar {
+                width: 95%;
+                height: max-content;
+                /* border: 1px solid black; */
+                margin: 10px auto;
+                display: block;
+                position: relative;
+                transition: 1.5s;
+
+
+
+
+            }
+
+
+
+            .m-logoimg {
+                width: 170px;
+                height: 50px;
+            }
+
+            .m-icondiv {
+                background-image: url(./underline@2x.png);
+                background-size: cover;
+                width: 60px;
+                height: 60px;
+                /* border: 1px solid red; */
+                display: block;
+                position: absolute;
+                right: 0;
+                top: 0;
+
+
+            }
+
+
+
+            .m-icondiv1 {
+                width: 50px;
+                height: 50px;
+                background-color: rgb(0, 200, 175);
+                position: absolute;
+                border-radius: 5px;
+                left: 3%;
+            }
+
+            .m-icondiv1:hover {
+                background-color: black;
+            }
+
+            .white-line {
+                width: 25px;
+                border-bottom: 1.5px solid white;
+                margin: 10px auto;
+                transition: 0.5s;
+            }
+
+            .m-icondiv1:hover .white-line1 {
+                margin-left: 15px;
+                margin-top: 15px;
+                transform: rotate(45deg);
+                transform-origin: left;
+            }
+
+            .m-icondiv1:hover .white-line2 {
+                opacity: 0;
+            }
+
+            .m-icondiv1:hover .white-line3 {
+                margin-left: 15px;
+                margin-top: -5px;
+                transform: rotate(-45deg);
+                transform-origin: left;
+            }
+
+
+            .m-coverdiv {
+                width: 100%;
+                height: max-content;
+                /* border: 1px solid yellow; */
+                margin-top: 20px;
+                visibility: hidden;
+                transition: 0.5s;
+                opacity: 0;
+                z-index: 50;
+                position: absolute;
+                background-color: white;
+            }
+
+            .m-icondiv:hover+.m-coverdiv {
+                visibility: visible;
+                /* transition: 1s; */
+                opacity: 1;
+
+            }
+
+            .m-textdiv {
+                width: 200px;
+                height: 50px;
+                /* border: 1px solid blue; */
+                background-color: rgb(0, 200, 175);
+                border-radius: 5px;
+                margin-top: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: white;
+
+
+            }
+
+            .m-nav {
+                width: 100%;
+                height: 50vh;
+                /* border: 1px solid red; */
+                margin-top: 20px;
+
+            }
+
+            .m-ul li {
+                font-size: 22px;
+                margin-top: 30px;
+            }
+
+            .m-email {
+                width: 250px;
+                height: 30px;
+                /* border: 1px solid blue; */
+                margin-top: 30px;
+            }
+
+            .m-menuimg {
+                width: 100%;
+
+            }
+
+            .run-text {
+                width: 400px;
+            }
+
+            .text-anim-div {
+                width: 95%;
+                margin-left: 5%;
+            }
+
+            .h-run-text {
+                font-size: 35px;
+            }
+        }
+
+        @media screen and (max-width:768px) {
+            .run-text {
+                width: 400px;
+            }
+
+            .h-run-text {
+                font-size: 30px;
+            }
+
+            .p-run-text {
+                font-size: 18px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main1">
+        <div class="navbar">
+
+            <img class="logo-img" src="./logo.svg" alt="">
+            <div class="nav">
+                <ul class="ul1">
+                    <li>Solutions</li>
+                    <li>Services</li>
+                    <li>Case Studies</li>
+                    <li>Pricing</li>
+                    <li>Resources</li>
+                </ul>
+            </div>
+            <div class="login-div">
+                <p class="p-login">Login</p>
+                <div class="lineimg-div">
+                    <img class="undrline-img" src="./underline@2x.png" alt="">
+                    <button class="btn1">Get Started</button>
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <div class="m-navbar">
+
+            <img class="m-logoimg" src="./logo.svg" alt="">
+            <div class="m-icondiv">
+
+                <div class="m-icondiv1">
+                    <div class="white-line white-line1"></div>
+                    <div class="white-line white-line2"></div>
+                    <div class="white-line white-line3"></div>
+                </div>
+            </div>
+
+
+            <div class="m-coverdiv">
+                <div class="m-textdiv">
+                    <p class="p-mtext">Get Started Today</p>
+                </div>
+                <div class="m-nav">
+                    <ul class="m-ul">
+                        <li>Solutions</li>
+                        <li>Services</li>
+                        <li>Case Stuies</li>
+                        <li>Pricing</li>
+                        <li>Resources</li>
+                        <li>Login</li>
+                    </ul>
+                </div>
+                <div class="m-email">
+                    <p>Email:team@neoreach.com</p>
+                </div>
+                <img class="m-menuimg" src="./menu-bg@2x.png" alt="">
+            </div>
+        </div>
+
+        <div class="text-anim-div">
+            <div class="run-text">
+                <div class="h1-run-text">
+                    <h1 class="h-run-text">Run World Class Influencer Marketing Campaigns.</h1>
+                </div>
+                <div class="p1-run-text">
+                    <p class="p-run-text">NeoReach enables world class original
+                        influencer campaigns for leading brands
+                        and Global Fortune 500s.</p>
+                </div>
+                <div class="img-btn">
+                    <img class="img-undrline" src="./underline@2x.png" alt="">
+                    <button class="btn-underline">LEARN MORE</button>
+                </div>
+            </div>
+            <div class="animation-div">
+                <img class="horn-img" src="./bullhorn@2x.png" alt="">
+                <img class="horn-lines" src="./horn-lines.svg" alt="">
+
+                <div class="white-dot"></div>
+                <div class="graph-div">
+                    <img class="graph-img" src="./graph-up.svg" alt="">
+                </div>
+                <div class="search-dot">
+                    <div class="black-line">
+                        <div class="dotimg-div">
+                            <img class="searchdot-img" src="./search-dots.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <img class="search-img" src="./search-bar@2x.png" alt="">
+
+                <div class="wave-div">
+                    <img class="wave-img" src="./graph-wave@2x.png" alt="">
+                    <img class="wave-img no2" src="./graph-wave@2x.png" alt="">
+                </div>
+                <img class="orng-circle" src="./circle-orange@2x.png" alt="">
+                <div class="card-slider">
+
+                    <img class="card-img one" src="./card-boy@2x.png" alt="">
+
+                    <img class="card-img two" src="./card-girl@2x.png" alt="">
+                    <img class="card-img three" src="./card-boy@2x.png" alt="">
+
+                    <img class="card-img four" src="./card-girl@2x.png" alt="">
+
+                    <img class="card-img five" src="./card-boy@2x.png" alt="">
+
+                    <img class="card-img six" src="./card-girl@2x.png" alt="">
+
+                </div>
+                <img class="hero-img" src="./hero-base1@2x.png" alt="">
+                <img class="talkbubble-img1" src="./talk-bubble@2x.png" alt="">
+                <img class="talkbubble-img2" src="./talk-bubble@2x.png" alt="">
+                <img class="hero-img2" src="./hero-base2@2x.png" alt="">
+
+
+            </div>
+        </div>
+
+
+
+    </div>
+    <div class="main2">
+        <div class="workillus">
+            <img class="illus-img" src="./work-illus1@2x.png" alt="">
+            <img class="pkg-photo1" data-aos="fade-up" src="./package-photo1@2x.png" alt="">
+        </div>
+
+    </div>
+
+</body>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+  </script>
+
+</html>
